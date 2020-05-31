@@ -1,0 +1,32 @@
+<style>
+p {
+   background-color: red;
+   color: white;
+   position: absolute;
+   top: 50%;
+   left: 18%;
+   font-size: 20px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #d92027;
+  color: white;
+}
+body{
+  background-image:  url(back.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
