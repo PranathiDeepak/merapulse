@@ -1,31 +1,68 @@
-# Heart Disease Prediction using Machine Learning
+# Heart Disease Prediction
 
-This is a simple end-to-end machine learning project that predicts the risk of heart disease using basic classification models. The project demonstrates the full workflow from data preprocessing and model training to deployment as a REST API with basic explainability.
+An end-to-end machine learning web application that predicts heart disease risk from clinical features. Built with an ensemble of Logistic Regression and Random Forest classifiers, served through a Flask web interface.
 
-## Description
-The goal of this project is to build a machine learning model that can classify whether a person is likely to have heart disease based on clinical features. The trained model is exposed through a Flask-based API for real-time predictions, and SHAP is used to provide feature importance for model interpretability.
+## About
 
-## Tools and Technologies
-- Python  
-- scikit-learn  
-- Flask  
-- SHAP  
-- Pandas  
-- NumPy  
+This project was built during my Bachelor's degree as a hands-on introduction to applied machine learning and web deployment. The model takes 13 clinical parameters as input and classifies whether a patient is at risk of heart disease.
 
-## Key Features
-- Data preprocessing and feature engineering  
-- Training of simple classification models  
-- Model evaluation using standard metrics  
-- REST API for real-time inference  
-- Explainable predictions using SHAP  
+**Key aspects:**
+- Multiple classification models trained and evaluated (Logistic Regression, Random Forest)
+- Ensemble model using soft voting for improved prediction accuracy
+- End-to-end deployment as a Flask web application with a form-based UI
+
+## Tech Stack
+
+- **Python** — scikit-learn, Pandas, NumPy
+- **Flask** — web framework and routing
+- **HTML / CSS** — frontend templates
+
+## Project Structure
+
+```
+merapulse/
+├── app.py          # Flask app — trains model on startup and serves predictions
+├── model.py        # Standalone training script (optional)
+├── dataset.csv     # Cleveland Heart Disease dataset (303 patients)
+├── templates/      # HTML pages (prediction form, result pages)
+└── static/         # CSS and static assets
+```
 
 ## How to Run
-1. Install the required packages:
-   ```bash
-   pip install -r requirements.txt
-2. Train the model:
-   python train.py
-3. Start the Flask server:
-   python app.py
-4. Send input features as a POST request to get predictions.
+
+**1. Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+**2. Start the app**
+```bash
+python app.py
+```
+The model trains automatically on startup — no separate training step needed.
+
+**3. Open in browser**
+
+Go to `http://localhost:5000`, fill in the patient details, and click **Predict**.
+
+## Input Features
+
+| Feature    | Description                                               |
+|------------|-----------------------------------------------------------|
+| Age        | Age in years                                              |
+| Sex        | 1 = male, 0 = female                                      |
+| CP         | Chest pain type (0–3)                                     |
+| Trestbps   | Resting blood pressure (mm Hg)                            |
+| Chol       | Serum cholesterol (mg/dl)                                 |
+| FBS        | Fasting blood sugar > 120 mg/dl (1 = true, 0 = false)    |
+| Restecg    | Resting ECG results (0–2)                                 |
+| Thalach    | Maximum heart rate achieved                               |
+| Exang      | Exercise-induced angina (1 = yes, 0 = no)                 |
+| Oldpeak    | ST depression (exercise vs rest)                          |
+| Slope      | Slope of peak exercise ST segment (0–2)                   |
+| CA         | Major vessels coloured by fluoroscopy (0–3)               |
+| Thal       | Thalassemia (3 = normal, 6 = fixed defect, 7 = reversible)|
+
+## Dataset
+
+[Cleveland Heart Disease Dataset](https://www.openml.org/d/43) — 303 patient records, 13 clinical features, binary classification target.
