@@ -1,20 +1,49 @@
-<!doctype html> <html lang="en"> 
- 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/disease.css') }}">
-	  <title>MeraPulse</title>
-	   </head>
-	   <body> 
-  <div class="topnav">
-  <a href="home.html">home</a>
-  <a href="prediction.html">prediction</a>
-  <a href="diseaseinfo.html">diseaseinfo</a>
-  <a href="aboutus.html">aboutus</a>
-</div>
- <p>The algorithm has diagnosed you with no heart disease based on your inputs. However it is recommended to consult Doctor</p> 
-</div>
- </body> 
- 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MeraPulse – Result</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="logo">Mera<span>Pulse</span></span>
+      <div class="nav-links">
+        <a href="/">Predict</a>
+        <a href="/aboutus">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="result-main">
+    <div class="result-card result-negative">
+      <div class="result-icon">✅</div>
+      <div class="result-badge safe">Low Risk</div>
+      <h1>The model indicates <span>no significant risk</span> of heart disease based on the provided parameters.</h1>
+      <p>This is a machine learning prediction, not a medical diagnosis. Continue maintaining a healthy lifestyle and consult your doctor for regular check-ups.</p>
+      <div class="result-actions">
+        <a href="/" class="btn-primary">← Try Again</a>
+      </div>
+    </div>
+
+    <div class="result-info">
+      <h3>Keep your heart healthy</h3>
+      <ul>
+        <li>Maintain a balanced diet low in saturated fats</li>
+        <li>Exercise regularly — at least 30 minutes a day</li>
+        <li>Schedule routine check-ups with your physician</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>MeraPulse · Heart Disease Risk Predictor · Bachelor's Project</p>
+  </footer>
+
+</body>
 </html>

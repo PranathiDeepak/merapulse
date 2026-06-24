@@ -1,20 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/disease.css') }}">
-<title>MeraPulse</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MeraPulse – Result</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
 </head>
- <div class="topnav">
-  <a href="home.html">home</a>
-  <a href="prediction.html">prediction</a>
-  <a href="diseaseinfo.html">diseaseinfo</a>
-  <a href="aboutus.html">aboutus</a>
-</div>
 <body>
-<div >
-<p>The algorithm has diagnosed you with heart disease based on your inputs. It is recommended to consult Doctor Immediately!!</p>
-</div>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="logo">Mera<span>Pulse</span></span>
+      <div class="nav-links">
+        <a href="/">Predict</a>
+        <a href="/aboutus">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="result-main">
+    <div class="result-card result-positive">
+      <div class="result-icon">⚠️</div>
+      <div class="result-badge risk">High Risk Detected</div>
+      <h1>The model indicates a <span>risk of heart disease</span> based on the provided parameters.</h1>
+      <p>This is a machine learning prediction, not a medical diagnosis. Please consult a qualified healthcare professional for proper evaluation and advice.</p>
+      <div class="result-actions">
+        <a href="/" class="btn-primary">← Try Again</a>
+      </div>
+    </div>
+
+    <div class="result-info">
+      <h3>What should you do next?</h3>
+      <ul>
+        <li>Schedule an appointment with your doctor or cardiologist</li>
+        <li>Share these clinical parameters with your physician</li>
+        <li>Avoid self-diagnosing based on this prediction alone</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>MeraPulse · Heart Disease Risk Predictor · Bachelor's Project</p>
+  </footer>
+
 </body>
 </html>
