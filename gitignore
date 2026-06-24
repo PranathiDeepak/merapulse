@@ -1,0 +1,16 @@
+# Model artefacts – regenerate locally with: python model.py
+model.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Environment
+venv/
+env/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
